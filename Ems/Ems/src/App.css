@@ -1,0 +1,348 @@
+.employee-details-layout {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: stretch;
+}
+
+.sidebar {
+  flex: 0 0 240px;
+  width: 240px;
+  height: 100vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-right: 1px solid #e8edf4;
+  box-shadow: 4px 0 18px rgba(15, 23, 42, 0.04);
+  padding: 0 14px 20px;
+}
+
+.sidebar-brand {
+  margin: 0 -14px 20px;
+  padding: 22px 20px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.03em;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar-nav button {
+  width: 100%;
+  text-align: left;
+  padding: 11px 14px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: #374151;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.sidebar-nav button:hover {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.sidebar-nav button:active {
+  background: #dbeafe;
+}
+
+.employee-details-main {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 24px 40px;
+}
+
+.topbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .employee-details-layout {
+    flex-direction: column;
+    position: static;
+    min-height: 100vh;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .employee-details-main {
+    height: auto;
+  }
+}
+
+.employee-content-area {
+  width: min(720px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.back-button {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #374151;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.back-button:hover {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #1d4ed8;
+}
+
+.employee-info-wrapper {
+  width: min(720px, 100%);
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.1);
+  border: 1px solid #e8edf4;
+}
+
+.employee-info-wrapper h1 {
+  margin: 0;
+  padding: 22px 30px;
+  font-size: 1.25rem;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  border-radius: 18px 18px 0 0;
+}
+
+.employee-info-card {
+  padding: 30px 32px 34px;
+}
+
+.employee-info-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #eef1f6;
+}
+
+.employee-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  outline: 3px solid #dbeafe;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
+  flex-shrink: 0;
+}
+
+.employee-info-header h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  color: #111827;
+  font-weight: 700;
+}
+
+.employee-role {
+  margin: 3px 0 10px;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 3px 11px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.status-active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-on-leave {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.status-inactive {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.form-section-title {
+  grid-column: 1 / -1;
+  margin: 0 0 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.employee-info-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row label {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.form-row input {
+  height: 42px;
+  padding: 0 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 9px;
+  background: #f8fafc;
+  color: #1e293b;
+  font-size: 0.92rem;
+}
+
+.form-row input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+  background: #ffffff;
+}
+
+.attendance-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.attendance-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.attendance-stat-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.attendance-stat-label {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 640px) {
+  .attendance-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.increment-actions {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #eef1f6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.increment-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.increment-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 26px rgba(37, 99, 235, 0.3);
+}
+
+.increment-button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.25);
+}
+
+.increment-message {
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: 9px;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  color: #1e293b;
+  font-size: 0.9rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.no-employee {
+  color: #6b7280;
+  font-size: 1rem;
+  padding: 24px 30px;
+}
+
+@media (max-width: 640px) {
+  .employee-info-form {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-info-header {
+    flex-wrap: wrap;
+  }
+}
